@@ -1,0 +1,10 @@
+#f-perfil{
+    border-radius: 50%;
+    margin-top: -8%;
+    width: 200px;
+    border:solid #32a1ce;
+    border-width: thin;
+}
+.centrar{
+    margin-left: 20px;
+}

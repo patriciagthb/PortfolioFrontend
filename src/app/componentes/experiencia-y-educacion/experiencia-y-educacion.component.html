@@ -1,0 +1,50 @@
+<div class="container">
+
+    <div class="card border-primary mb-3">
+
+        <div class="card-body">
+            <h5 class="card-title negrita">Educación</h5>
+            <ul>
+
+                <li *ngFor="let educacion of educacionList">
+                    <div>
+                        <div class="row">
+                            <div class="col-1 align-self-center">
+                                <img [src]="educacion.logo" alt="escudo escuela">
+                            </div>
+                            <div class="card-text col-11">
+                                <h6>{{educacion.institucion}}</h6>
+                                <p>{{educacion.titulo}}</p>
+                                <p>{{educacion.desde}} - {{educacion.hasta}}</p>
+                                <p>{{educacion.ubicacion}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="card-body">
+            <h5 class="card-title negrita">Experiencia</h5>
+            <ul>
+                <li *ngFor="let experiencia of experienciaList">
+                    <div>
+                        <div class="row">
+                            <div class="col-1 align-self-center">
+                                <img [src]="experiencia.logo" alt="logo farmacity">
+                            </div>
+                            <div class="card-text col-11">
+                                <h6>{{experiencia.empresa}}</h6>
+                                <p>{{experiencia.puesto}}</p>
+                                <p>{{experiencia.desde}} - {{ experiencia.hasta}}</p>
+                                <p>{{experiencia.ubicacion}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>

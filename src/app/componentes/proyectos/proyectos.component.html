@@ -1,0 +1,16 @@
+<div class="container">
+
+    <div class="card border-primary mb-3">
+        <div class="card-body">
+            <h5 class="card-title negrita">Proyectos</h5>
+            <div *ngFor="let proyecto of proyectos">
+                <h6>{{proyecto.nombre}} - {{proyecto.fecha}}</h6>
+                
+                <p>{{proyecto.descripcion}} </p>
+                <!-- fotos opcional-->
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card border-primary mb-3">
+        <div class="card-body">
+            <div class="row">
+                <h5 class="card-title negrita col-11">Acerca De</h5>
+                <div class="col-1">
+                    <i class="fa fa-pencil mx-3"></i>
+                    <i class="fa fa-xmark"></i>
+                </div>
+            </div>
+            <div *ngFor="let acerca of acerca">
+                <p class="card-text">{{acerca.acercaDe}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div class="card border-primary mb-3">
+    <div class="card-body">
+      <h5 class="card-title negrita">Hard Skills & Soft Skills</h5>
+
+      <ul>
+        <li *ngFor="let skill of skills">
+
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated colort" role="progressbar"
+              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" [style.width]="barrs(skill.porcentaje)">{{skill.nombre}}</div>
+          </div>
+          <br>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
