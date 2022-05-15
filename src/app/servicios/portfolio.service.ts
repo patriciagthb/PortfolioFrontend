@@ -15,7 +15,7 @@ import { Observable } from 'rxjs';
 })
 export class PortfolioService {
 
-   url = 'http://localhost:8080';
+   url = 'http://localhost:8080/api';
 
 
   constructor(private http:HttpClient) { }
@@ -36,10 +36,23 @@ export class PortfolioService {
     return this.http.get<Educacion[]>(this.url+'/educacion/get/educ');
   } 
 
-  //AcercaDe
+  //AcercaDe Service//
+  //traer lista
   obtenerDatosA():Observable<AcercaDe[]>{
     return this.http.get<AcercaDe[]>(this.url+'/acerca/get/acerca');
   }
+
+  //traer por id //id:string
+  getAdById(id:string ):Observable<any>{
+    return this.http.get(this.url+'/acerca/findById/'+id);
+  }
+
+  //update //id:number
+  updateAcerca(id:string, acerca: AcercaDe):Observable<any>{
+    return this.http.put<any>(this.url+'/acerca/update/'+id, acerca);
+  }
+
+
 
   //Habilidades
   obtenerDatosSkills():Observable<Habilidades[]>{
@@ -53,9 +66,4 @@ export class PortfolioService {
 
 
 
-
-
-/*   obtenerDatos():Observable<any>{
-    return this.http.get('../assets/data/data.json');
-  } */
 }

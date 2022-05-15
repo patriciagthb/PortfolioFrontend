@@ -10,6 +10,10 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { FormsModule } from '@angular/forms';
+import { UpdateAcercaDeComponent } from './componentes/update-acerca-de/update-acerca-de.component';
+import { HomeComponent } from './componentes/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -18,12 +22,15 @@ import { HttpClientModule } from '@angular/common/http';
     AcercaDeComponent,
     ExperienciaYEducacionComponent,
     SkillsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    UpdateAcercaDeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

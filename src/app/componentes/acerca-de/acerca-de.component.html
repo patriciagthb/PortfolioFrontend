@@ -3,13 +3,15 @@
         <div class="card-body">
             <div class="row">
                 <h5 class="card-title negrita col-11">Acerca De</h5>
-                <div class="col-1">
-                    <i class="fa fa-pencil mx-3"></i>
-                    <i class="fa fa-xmark"></i>
-                </div>
             </div>
-            <div *ngFor="let acerca of acerca">
-                <p class="card-text">{{acerca.acercaDe}}</p>
+            <div class="row">
+                <div *ngFor="let acerca of acerca">
+                    <div class="col-md-1 ms-auto">
+                        <a routerLink="/update-acercade/{{acerca.id}}"><i  class="fa fa-pencil mx-3" type="button"></i></a>
+                        <i class="fa fa-xmark"></i>
+                    </div>
+                    <p class="card-text col-md-8">{{acerca.acercaDe}}</p>
+                </div>
             </div>
         </div>
     </div>
