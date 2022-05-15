@@ -16,6 +16,8 @@ import { HomeComponent } from './componentes/home/home.component';
 import { UpdateExperienciaComponent } from './componentes/update-experiencia/update-experiencia.component';
 import { UpdateEducacionComponent } from './componentes/update-educacion/update-educacion.component';
 import { UpdateEncabezadoComponent } from './componentes/update-encabezado/update-encabezado.component';
+import { AddEducacionComponent } from './componentes/add-educacion/add-educacion.component';
+import { AddExperienciaComponent } from './componentes/add-experiencia/add-experiencia.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { UpdateEncabezadoComponent } from './componentes/update-encabezado/updat
     HomeComponent,
     UpdateExperienciaComponent,
     UpdateEducacionComponent,
-    UpdateEncabezadoComponent
+    UpdateEncabezadoComponent,
+    AddEducacionComponent,
+    AddExperienciaComponent
   ],
   imports: [
     BrowserModule,

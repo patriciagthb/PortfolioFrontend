@@ -41,47 +41,48 @@
 
 
     <div class="col-md-6 offset-md-3">
-        <h3> Actualizar Sección Experiencia </h3>
-        <form (ngSubmit)="updateExp()">
+        <h3> Ingrese datos de nuevo registro de Educacion </h3>
+        <form (ngSubmit)="crearEduc()">
 
             <div class="form-group">
-                <label> Empresa:</label>
-                <input type="text" class="form-control" id="id" [(ngModel)]="experiencia.empresa" name="empresa">
+                <label> Institucion:</label>
+                <input type="text" class="form-control" id="id" [(ngModel)]="nuevaEduc.institucion" name="institucion">
             </div>
 
             <div class="form-group">
-                <label> Puesto:</label>
-                <input type="text" class="form-control" id="id" [(ngModel)]="experiencia.puesto" name="puesto">
+                <label> Título:</label>
+                <input type="text" class="form-control" id="id" [(ngModel)]="nuevaEduc.titulo" name="titulo">
             </div>
 
             <div class="form-group">
                 <label> Desde:</label>
-                <input type="text" class="form-control" id="id" [(ngModel)]="experiencia.desde" name="desde">
+                <input type="text" class="form-control" id="id" [(ngModel)]="nuevaEduc.desde" name="desde">
             </div>
 
             <div class="form-group">
                 <label> Hasta:</label>
-                <input type="text" class="form-control" id="id" [(ngModel)]="experiencia.hasta" name="hasta">
+                <input type="text" class="form-control" id="id" [(ngModel)]="nuevaEduc.hasta" name="hasta">
             </div>
 
             <div class="form-group">
                 <label> Ubicación:</label>
-                <input type="text" class="form-control" id="id" [(ngModel)]="experiencia.ubicacion" name="educacion">
+                <input type="text" class="form-control" id="id" [(ngModel)]="nuevaEduc.ubicacion" name="educacion">
             </div>
 
             <div class="form-group">
                 <label> Logo (solo en formato url):</label>
-                <input type="text" class="form-control" id="id" [(ngModel)]="experiencia.logo" name="logo">
+                <input type="text" class="form-control" id="id" [(ngModel)]="nuevaEduc.logo" name="logo">
             </div>
+
+
 
             <div class="row">
 
-                <button class="btn btn-outline-primary col-3 " type="submit">Actualizar</button>
+                <button class="btn btn-outline-primary col-3 " type="submit">Guardar</button>
 
                 <button class="btn btn-outline-primary col-3" routerLink="/home" type="button">Cancelar</button>
 
             </div>
-
 
         </form>
     </div>

@@ -21,29 +21,27 @@ export class PortfolioService {
   constructor(private http: HttpClient) { }
 
   //Encabezado-----------------------------------
-
+  //traer lista
   obtenerDatos(): Observable<Encabezado[]> {
     return this.http.get<Encabezado[]>(this.url + '/encabezado/get/enc');
   }
 
-    //traer por id //id:string
-    getEncById(id: string): Observable<any> {
-      return this.http.get(this.url + '/encabezado/findById/' + id);
-    }
+  //traer por id 
+  getEncById(id: string): Observable<any> {
+    return this.http.get(this.url + '/encabezado/findById/' + id);
+  }
 
-      //update //id:number
+  //update 
   updateEnc(id: string, encabezado: Encabezado): Observable<any> {
     return this.http.put<any>(this.url + '/encabezado/update/' + id, encabezado);
   }
 
 
-
-
   //Experiencia--------------------------------
+  //traer lista
   obtenerDatosExp(): Observable<Experiencia[]> {
     return this.http.get<Experiencia[]>(this.url + '/experiencia/get/exp');
   }
-
 
   //traer por id //id:string
   getExpById(id: string): Observable<any> {
@@ -53,6 +51,11 @@ export class PortfolioService {
   //update //id:number
   updateExperiencia(id: string, experiencia: Experiencia): Observable<any> {
     return this.http.put<any>(this.url + '/experiencia/update/' + id, experiencia);
+  }
+
+  //crear
+  addExperiencia(experiencia: Experiencia): Observable<any> {
+    return this.http.post<any>(this.url + '/experiencia/new', experiencia);
   }
 
 
@@ -73,6 +76,11 @@ export class PortfolioService {
   updateEducacion(id: string, educacion: Educacion): Observable<any> {
     return this.http.put<any>(this.url + '/educacion/update/' + id, educacion);
   }
+
+    //crear
+    addEducacion(educacion: Educacion): Observable<any> {
+    return this.http.post<any>(this.url + '/educacion/new', educacion);
+    }
 
 
 

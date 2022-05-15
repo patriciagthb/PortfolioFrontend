@@ -1,3 +1,5 @@
+import { AddEducacionComponent } from './componentes/add-educacion/add-educacion.component';
+import { AddExperienciaComponent } from './componentes/add-experiencia/add-experiencia.component';
 import { UpdateEncabezadoComponent } from './componentes/update-encabezado/update-encabezado.component';
 import { UpdateExperienciaComponent } from './componentes/update-experiencia/update-experiencia.component';
 import { UpdateEducacionComponent } from './componentes/update-educacion/update-educacion.component';
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path: 'update-educacion/:id', component: UpdateEducacionComponent},
   {path:'update-encabezado/:id', component: UpdateEncabezadoComponent},
   {path: 'update-experiencia/:id', component: UpdateExperienciaComponent},
+  {path: 'add-experiencia', component: AddExperienciaComponent},
+  {path: 'add-educacion', component: AddEducacionComponent},
   {path : '', redirectTo: 'home', pathMatch:'full'}
 ];
 
