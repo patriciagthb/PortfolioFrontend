@@ -47,8 +47,15 @@
           <li *ngFor="let portfolio of miPortfolio">
         <div>
           <img id="f-perfil" class="img-fluid" [src]="portfolio.fotoperfil" alt="foto de perfil">
-          <i class="fa fa-pencil "></i>
+          <!--<i class="fa fa-pencil "></i>-->
         </div>
+
+        <div class="col-md-1 ms-auto">
+          <a routerLink="/update-encabezado/{{portfolio.id}}"><i class="fa fa-pencil mx-3"
+                  type="button"></i></a>
+
+      </div>
+
         <div class="d-flex">
           <div class="centrar p-2">
             <h3 card-title>{{portfolio.nombre}}</h3>
@@ -56,7 +63,6 @@
             <p class="card-text">{{portfolio.titulo}}</p>
             <p class="card-text">{{portfolio.ubicacion}}</p>
           </div>
-          <span class="ml-auto p-2"><i class="fa fa-pencil "></i></span>
 
         </div>
       </li>

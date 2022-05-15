@@ -1,1 +1,74 @@
-<p>update-encabezado works!</p>
+<div class="container">
+
+    <div class="card border-primary mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand"
+                    href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa"
+                    target="_blank">
+                    <img id="logoAp" src="../assets/img/logo-ap2.JPG" alt="Logo Argentina Programa">
+                    #YoProgramo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div>
+
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="https://github.com/patriciagthb" target="_blank"><i
+                                        class="fa-brands fa-github fa-4x text-primary"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://twitter.com/atyclblady" target="_blank"><i
+                                        class="fa-brands fa-twitter-square fa-4x text-primary"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.youtube.com/channel/UCjBiEQl68ct8kHJLXdRvTkA" target="_blank"
+                                    class=><i class="fa-brands fa-youtube fa-4x text-primary"></i></a>
+                            </li>
+                        </ul>
+                        <form>
+                            <button type="submit" class="btn btn-outline-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="col-md-6 offset-md-3">
+        <h3> Actualizar Sección Encabezado </h3>
+        <form (ngSubmit)="updateEnc()">
+
+            <div class="form-group">
+                <label> Nombre:</label>
+                <input type="text" class="form-control" id="id" [(ngModel)]="encabezado.nombre" name="nombre">
+            </div>
+
+            <div class="form-group">
+                <label> Titulo:</label>
+                <input type="text" class="form-control" id="id" [(ngModel)]="encabezado.titulo" name="titulo">
+            </div>
+
+            <div class="form-group">
+                <label> Ubicacion:</label>
+                <input type="text" class="form-control" id="id" [(ngModel)]="encabezado.ubicacion" name="ubicacion">
+            </div>
+
+            <div class="row">
+
+                <button class="btn btn-outline-primary col-3 " type="submit">Actualizar</button>
+
+                <button class="btn btn-outline-primary col-3" routerLink="/home" type="button">Cancelar</button>
+
+            </div>
+
+
+        </form>
+    </div>
+
+</div>

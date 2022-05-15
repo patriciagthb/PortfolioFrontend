@@ -1,9 +1,9 @@
-export class Encabezado{
-    constructor(
-        public id:number,
-        public nombre:string,
-        public fotoperfil:string,
-        public titulo:string,
-        public ubicacion:string
-    ){}
+export class Encabezado {
+
+    id: string;
+    nombre: string;
+    fotoperfil: string;
+    titulo: string;
+    ubicacion: string;
+
 }

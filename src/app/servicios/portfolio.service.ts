@@ -26,10 +26,37 @@ export class PortfolioService {
     return this.http.get<Encabezado[]>(this.url + '/encabezado/get/enc');
   }
 
+    //traer por id //id:string
+    getEncById(id: string): Observable<any> {
+      return this.http.get(this.url + '/encabezado/findById/' + id);
+    }
+
+      //update //id:number
+  updateEnc(id: string, encabezado: Encabezado): Observable<any> {
+    return this.http.put<any>(this.url + '/encabezado/update/' + id, encabezado);
+  }
+
+
+
+
   //Experiencia--------------------------------
   obtenerDatosExp(): Observable<Experiencia[]> {
     return this.http.get<Experiencia[]>(this.url + '/experiencia/get/exp');
   }
+
+
+  //traer por id //id:string
+  getExpById(id: string): Observable<any> {
+    return this.http.get(this.url + '/experiencia/findById/' + id);
+  }
+
+  //update //id:number
+  updateExperiencia(id: string, experiencia: Experiencia): Observable<any> {
+    return this.http.put<any>(this.url + '/experiencia/update/' + id, experiencia);
+  }
+
+
+
 
   //Educacion-----------------------------------
   //traer lista
@@ -49,7 +76,7 @@ export class PortfolioService {
 
 
 
-  //AcercaDe Service//-------------------------
+  //AcercaDe Service-----------------------------------------------
   //traer lista
   obtenerDatosA(): Observable<AcercaDe[]> {
     return this.http.get<AcercaDe[]>(this.url + '/acerca/get/acerca');

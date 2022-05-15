@@ -8,7 +8,8 @@
 
                 <li *ngFor="let educacion of educacionList">
                     <div class="col-md-1 ms-auto">
-                        <a routerLink="/update-educacion/{{educacion.id}}"><i  class="fa fa-pencil mx-3" type="button"></i></a>
+                        <a routerLink="/update-educacion/{{educacion.id}}"><i class="fa fa-pencil mx-3"
+                                type="button"></i></a>
                         <i class="fa fa-xmark"></i>
                     </div>
                     <div>
@@ -35,6 +36,11 @@
             <h5 class="card-title negrita">Experiencia</h5>
             <ul>
                 <li *ngFor="let experiencia of experienciaList">
+                    <div class="col-md-1 ms-auto">
+                        <a routerLink="/update-experiencia/{{experiencia.id}}"><i class="fa fa-pencil mx-3"
+                                type="button"></i></a>
+                        <i class="fa fa-xmark"></i>
+                    </div>
                     <div>
                         <div class="row">
                             <div class="col-1 align-self-center">

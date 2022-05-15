@@ -1,3 +1,15 @@
+export class Experiencia {
+    id: string;
+    empresa: string;
+    puesto: string;
+    desde: string;
+    hasta: string;
+    ubicacion: string;
+    logo: string;
+
+}
+
+/*
 export class Experiencia{
     constructor(
         public id:number,
@@ -8,4 +20,4 @@ export class Experiencia{
         public ubicacion:string,
         public logo:string
     ){}
-}
+}*/
