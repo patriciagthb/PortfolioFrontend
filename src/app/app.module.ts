@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { UpdateAcercaDeComponent } from './componentes/update-acerca-de/update-acerca-de.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { UpdateExperienciaComponent } from './componentes/update-experiencia/update-experiencia.component';
+import { UpdateEducacionComponent } from './componentes/update-educacion/update-educacion.component';
+import { UpdateEncabezadoComponent } from './componentes/update-encabezado/update-encabezado.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { HomeComponent } from './componentes/home/home.component';
     SkillsComponent,
     ProyectosComponent,
     UpdateAcercaDeComponent,
-    HomeComponent
+    HomeComponent,
+    UpdateExperienciaComponent,
+    UpdateEducacionComponent,
+    UpdateEncabezadoComponent
   ],
   imports: [
     BrowserModule,

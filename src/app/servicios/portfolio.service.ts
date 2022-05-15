@@ -15,53 +15,66 @@ import { Observable } from 'rxjs';
 })
 export class PortfolioService {
 
-   url = 'http://localhost:8080/api';
+  url = 'http://localhost:8080/api';
 
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  //Encabezado
+  //Encabezado-----------------------------------
 
-  obtenerDatos():Observable<Encabezado[]>{
-    return this.http.get<Encabezado[]>(this.url+'/encabezado/get/enc');
-  } 
+  obtenerDatos(): Observable<Encabezado[]> {
+    return this.http.get<Encabezado[]>(this.url + '/encabezado/get/enc');
+  }
 
-  //Experiencia
-  obtenerDatosExp():Observable<Experiencia[]>{
-    return this.http.get<Experiencia[]>(this.url+'/experiencia/get/exp');
-  } 
+  //Experiencia--------------------------------
+  obtenerDatosExp(): Observable<Experiencia[]> {
+    return this.http.get<Experiencia[]>(this.url + '/experiencia/get/exp');
+  }
 
-  //Educacion
-  obtenerDatosEduc():Observable<Educacion[]>{
-    return this.http.get<Educacion[]>(this.url+'/educacion/get/educ');
-  } 
-
-  //AcercaDe Service//
+  //Educacion-----------------------------------
   //traer lista
-  obtenerDatosA():Observable<AcercaDe[]>{
-    return this.http.get<AcercaDe[]>(this.url+'/acerca/get/acerca');
+  obtenerDatosEduc(): Observable<Educacion[]> {
+    return this.http.get<Educacion[]>(this.url + '/educacion/get/educ');
   }
 
   //traer por id //id:string
-  getAdById(id:string ):Observable<any>{
-    return this.http.get(this.url+'/acerca/findById/'+id);
+  getEducById(id: string): Observable<any> {
+    return this.http.get(this.url + '/educacion/findById/' + id);
   }
 
   //update //id:number
-  updateAcerca(id:string, acerca: AcercaDe):Observable<any>{
-    return this.http.put<any>(this.url+'/acerca/update/'+id, acerca);
+  updateEducacion(id: string, educacion: Educacion): Observable<any> {
+    return this.http.put<any>(this.url + '/educacion/update/' + id, educacion);
   }
 
 
 
-  //Habilidades
-  obtenerDatosSkills():Observable<Habilidades[]>{
-    return this.http.get<Habilidades[]>(this.url+'/habilidades/get/hab');
+  //AcercaDe Service//-------------------------
+  //traer lista
+  obtenerDatosA(): Observable<AcercaDe[]> {
+    return this.http.get<AcercaDe[]>(this.url + '/acerca/get/acerca');
   }
 
-  //Proyectos
-  obtenerDatosProy():Observable<Proyectos[]>{
-    return this.http.get<Proyectos[]>(this.url+'/proyectos/get/proy');
+  //traer por id //id:string
+  getAdById(id: string): Observable<any> {
+    return this.http.get(this.url + '/acerca/findById/' + id);
+  }
+
+  //update //id:number
+  updateAcerca(id: string, acerca: AcercaDe): Observable<any> {
+    return this.http.put<any>(this.url + '/acerca/update/' + id, acerca);
+  }
+
+
+
+  //Habilidades---------------------------------------
+  obtenerDatosSkills(): Observable<Habilidades[]> {
+    return this.http.get<Habilidades[]>(this.url + '/habilidades/get/hab');
+  }
+
+  //Proyectos--------------------------------------------
+  obtenerDatosProy(): Observable<Proyectos[]> {
+    return this.http.get<Proyectos[]>(this.url + '/proyectos/get/proy');
   }
 
 

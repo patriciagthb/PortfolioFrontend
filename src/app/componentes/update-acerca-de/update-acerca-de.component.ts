@@ -38,16 +38,16 @@ export class UpdateAcercaDeComponent implements OnInit {
 */
 
 
-this.id= this.route.snapshot.params['id'];
-this.datosPortfolio.getAdById(this.id).subscribe(data=>{
-  this.acerca=data;
-});
-}
-
-updateAc(){
-  this.datosPortfolio.updateAcerca(this.id, this.acerca).subscribe(data=>{
-    this.router.navigate(['']);
+    this.id = this.route.snapshot.params['id'];
+    this.datosPortfolio.getAdById(this.id).subscribe(data => {
+      this.acerca = data;
+    });
   }
-  );
-}
+
+  updateAc() {
+    this.datosPortfolio.updateAcerca(this.id, this.acerca).subscribe(data => {
+      this.router.navigate(['']);
+    }
+    );
+  }
 }
