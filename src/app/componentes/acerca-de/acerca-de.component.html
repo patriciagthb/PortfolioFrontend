@@ -7,8 +7,8 @@
             <div class="row">
                 <div *ngFor="let acerca of acerca">
                     <div class="col-md-1 ms-auto">
-                        <a routerLink="/update-acercade/{{acerca.id}}"><i  class="fa fa-pencil mx-3" type="button"></i></a>
-                        <i class="fa fa-xmark"></i>
+                        <a routerLink="/update-acercade/{{acerca.id}}" *ngIf="ulogged!=''"><i class="fa fa-pencil mx-3"
+                                type="button"></i></a>
                     </div>
                     <p class="card-text col-md-8">{{acerca.acercaDe}}</p>
                 </div>

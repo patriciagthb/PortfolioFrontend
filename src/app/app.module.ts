@@ -18,6 +18,8 @@ import { UpdateEducacionComponent } from './componentes/update-educacion/update-
 import { UpdateEncabezadoComponent } from './componentes/update-encabezado/update-encabezado.component';
 import { AddEducacionComponent } from './componentes/add-educacion/add-educacion.component';
 import { AddExperienciaComponent } from './componentes/add-experiencia/add-experiencia.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { AddExperienciaComponent } from './componentes/add-experiencia/add-exper
     UpdateEducacionComponent,
     UpdateEncabezadoComponent,
     AddEducacionComponent,
-    AddExperienciaComponent
+    AddExperienciaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,7 @@ import { AddExperienciaComponent } from './componentes/add-experiencia/add-exper
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

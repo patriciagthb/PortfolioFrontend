@@ -30,9 +30,7 @@
                                     class=><i class="fa-brands fa-youtube fa-4x text-primary"></i></a>
                             </li>
                         </ul>
-                        <form>
-                            <button type="submit" class="btn btn-outline-primary">Login</button>
-                        </form>
+
                     </div>
                 </div>
             </div>
@@ -43,6 +41,12 @@
     <div class="col-md-6 offset-md-3">
         <h3> Actualizar Sección Encabezado </h3>
         <form (ngSubmit)="updateEnc()">
+
+
+            <div class="form-group">
+                <label> Foto de Perfil (solo en formato url):</label>
+                <input type="text" class="form-control" id="id" [(ngModel)]="encabezado.fotoperfil" name="fotoperfil">
+            </div>
 
             <div class="form-group">
                 <label> Nombre:</label>

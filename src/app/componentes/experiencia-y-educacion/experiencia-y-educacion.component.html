@@ -15,7 +15,7 @@
                     <div class="col-md-1 ms-auto">
                         <a routerLink="/update-educacion/{{educacion.id}}"><i class="fa fa-pencil mx-3"
                                 type="button"></i></a>
-                        <i class="fa fa-xmark"></i>
+                        <i class="fa-regular fa-trash-can" type="button" (click)="deleteEduc(educacion.id)"></i>
                     </div>
                     <div>
                         <div class="row">
@@ -48,7 +48,7 @@
                     <div class="col-md-1 ms-auto">
                         <a routerLink="/update-experiencia/{{experiencia.id}}"><i class="fa fa-pencil mx-3"
                                 type="button"></i></a>
-                        <i class="fa fa-xmark"></i>
+                        <i class="fa-regular fa-trash-can" type="button" (click)="deleteExp(experiencia.id)"></i>
                     </div>
                     <div>
                         <div class="row">
@@ -67,3 +67,4 @@
             </ul>
         </div>
     </div>
+

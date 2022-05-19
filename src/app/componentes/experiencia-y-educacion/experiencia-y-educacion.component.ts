@@ -24,4 +24,16 @@ export class ExperienciaYEducacionComponent implements OnInit {
 
   }
 
+  deleteEduc(id:string){
+    this.datosPortfolio.deleteEducacion(id).subscribe(data =>{
+      this.ngOnInit()
+    });
+  }
+
+  deleteExp(id:string){
+    this.datosPortfolio.deleteExperiencia(id).subscribe(data =>{
+      this.ngOnInit()
+    });
+  }
+
 }

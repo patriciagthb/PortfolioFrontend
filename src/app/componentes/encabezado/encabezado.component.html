@@ -30,7 +30,8 @@
               </li>
             </ul>
             <form>
-              <button type="submit" class="btn btn-outline-primary">Login</button>
+              <button type="submit" *ngIf="ulogged!==''" class="btn btn-outline-primary" (click)="salir()">Salir</button>
+              <button type="submit" *ngIf="ulogged==''" class="btn btn-outline-primary" (click)="loggin()">Login</button>
             </form>
           </div>
         </div>
@@ -47,11 +48,10 @@
           <li *ngFor="let portfolio of miPortfolio">
         <div>
           <img id="f-perfil" class="img-fluid" [src]="portfolio.fotoperfil" alt="foto de perfil">
-          <!--<i class="fa fa-pencil "></i>-->
         </div>
 
         <div class="col-md-1 ms-auto">
-          <a routerLink="/update-encabezado/{{portfolio.id}}"><i class="fa fa-pencil mx-3"
+          <a routerLink="/update-encabezado/{{portfolio.id}}" *ngIf="ulogged!=''"><i class="fa fa-pencil mx-3"
                   type="button"></i></a>
 
       </div>

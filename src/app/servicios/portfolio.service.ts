@@ -1,3 +1,4 @@
+import { CookieService } from 'ngx-cookie-service';
 import { Proyectos } from './../models/proyectos';
 import { Habilidades } from './../models/habilidades';
 import { Encabezado } from './../models/encabezado';
@@ -18,7 +19,39 @@ export class PortfolioService {
   url = 'http://localhost:8080/api';
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cookies: CookieService) { }
+
+
+  //Login---------------------------------------
+  //devuelve uno
+  login(user: any): Observable<any> {
+    return this.http.post(this.url + '/user/login', user);
+  }
+
+  getUser(id: number): Observable<any> {
+    return this.http.get(this.url + '/user/' + id);
+  }
+
+  //token
+  setToken(token: string) {
+    this.cookies.set('token', token);
+  }
+
+  getToken(){
+    return this.cookies.get('token');
+  }
+
+  deleteToken(){
+    this.cookies.delete('token');
+  }
+
+  getUserLogged(){
+    const token = this.getToken();
+    return token;
+  }
+
+
+
 
   //Encabezado-----------------------------------
   //traer lista
@@ -43,12 +76,12 @@ export class PortfolioService {
     return this.http.get<Experiencia[]>(this.url + '/experiencia/get/exp');
   }
 
-  //traer por id //id:string
+  //traer por id
   getExpById(id: string): Observable<any> {
     return this.http.get(this.url + '/experiencia/findById/' + id);
   }
 
-  //update //id:number
+  //update 
   updateExperiencia(id: string, experiencia: Experiencia): Observable<any> {
     return this.http.put<any>(this.url + '/experiencia/update/' + id, experiencia);
   }
@@ -56,6 +89,11 @@ export class PortfolioService {
   //crear
   addExperiencia(experiencia: Experiencia): Observable<any> {
     return this.http.post<any>(this.url + '/experiencia/new', experiencia);
+  }
+
+  //borrar
+  deleteExperiencia(id: string): Observable<any> {
+    return this.http.delete(this.url + '/experiencia/delete/' + id)
   }
 
 
@@ -77,10 +115,15 @@ export class PortfolioService {
     return this.http.put<any>(this.url + '/educacion/update/' + id, educacion);
   }
 
-    //crear
-    addEducacion(educacion: Educacion): Observable<any> {
+  //crear
+  addEducacion(educacion: Educacion): Observable<any> {
     return this.http.post<any>(this.url + '/educacion/new', educacion);
-    }
+  }
+
+  //borrar
+  deleteEducacion(id: string): Observable<any> {
+    return this.http.delete(this.url + '/educacion/delete/' + id)
+  }
 
 
 
