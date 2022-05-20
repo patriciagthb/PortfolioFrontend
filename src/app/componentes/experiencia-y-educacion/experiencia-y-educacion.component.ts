@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiencia-y-educacion.component.css']
 })
 export class ExperienciaYEducacionComponent implements OnInit {
+
   educacionList: any;
   experienciaList: any;
+  ulogged:string = '';
   
   constructor(private datosPortfolio: PortfolioService) { }
 
@@ -21,6 +23,8 @@ export class ExperienciaYEducacionComponent implements OnInit {
     this.datosPortfolio.obtenerDatosExp().subscribe(data => {
       this.experienciaList = data;
     });
+
+    this.ulogged = this.datosPortfolio.getUserLogged();
 
   }
 

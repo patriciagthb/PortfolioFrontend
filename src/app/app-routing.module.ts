@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'update-experiencia/:id', component: UpdateExperienciaComponent},
   {path: 'add-experiencia', component: AddExperienciaComponent},
   {path: 'add-educacion', component: AddEducacionComponent},
-  {path: 'login', component: LoginComponent},
+  {path: 'login', component: LoginComponent},  
   {path : '', redirectTo: 'home', pathMatch:'full'}
 ];
 

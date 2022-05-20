@@ -13,23 +13,22 @@ export class EncabezadoComponent implements OnInit {
   miPortfolio:any;
   ulogged:string = '';
 
-
   constructor(private datosPortfolio:PortfolioService,
               private router:Router) { }
+
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
       this.miPortfolio = data;
     } );
     this.ulogged = this.datosPortfolio.getUserLogged();    
-
   }
 
   salir():void{
     this.datosPortfolio.deleteToken();
-    this.ulogged = '';
+    this.ulogged = '';    
   }
-
+  
   loggin():void {
     this.router.navigate(['/login'])
   }

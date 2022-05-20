@@ -23,6 +23,7 @@ export class AcercaDeComponent implements OnInit {
     });
       this.ulogged = this.datosPortfolio.getUserLogged();
   }
+}
     /*salir():void{
     this.datosPortfolio.deleteToken();
     this.ulogged = '';
@@ -33,4 +34,4 @@ export class AcercaDeComponent implements OnInit {
   }*/
 
 
-}
+
