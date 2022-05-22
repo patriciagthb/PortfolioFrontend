@@ -29,15 +29,19 @@ export class ExperienciaYEducacionComponent implements OnInit {
   }
 
   deleteEduc(id:string){
+    if(confirm('¿Está seguro de que desea eliminar el registro?')){
     this.datosPortfolio.deleteEducacion(id).subscribe(data =>{
       this.ngOnInit()
-    });
+    })};
   }
 
+
+
   deleteExp(id:string){
+    if(confirm('¿Está seguro de que desea eliminar el registro?')){
     this.datosPortfolio.deleteExperiencia(id).subscribe(data =>{
       this.ngOnInit()
-    });
+    })};
   }
 
 }

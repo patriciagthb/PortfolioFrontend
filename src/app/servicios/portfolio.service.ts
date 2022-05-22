@@ -56,7 +56,7 @@ export class PortfolioService {
   //Encabezado-----------------------------------
   //traer lista
   obtenerDatos(): Observable<Encabezado[]> {
-    return this.http.get<Encabezado[]>(this.url + '/encabezado/get/enc');
+    return this.http.get<Encabezado[]>(this.url + '/encabezado/get');
   }
 
   //traer por id 
@@ -73,7 +73,7 @@ export class PortfolioService {
   //Experiencia--------------------------------
   //traer lista
   obtenerDatosExp(): Observable<Experiencia[]> {
-    return this.http.get<Experiencia[]>(this.url + '/experiencia/get/exp');
+    return this.http.get<Experiencia[]>(this.url + '/experiencia/get');
   }
 
   //traer por id
@@ -102,15 +102,15 @@ export class PortfolioService {
   //Educacion-----------------------------------
   //traer lista
   obtenerDatosEduc(): Observable<Educacion[]> {
-    return this.http.get<Educacion[]>(this.url + '/educacion/get/educ');
+    return this.http.get<Educacion[]>(this.url + '/educacion/get');
   }
 
-  //traer por id //id:string
+  //traer por id 
   getEducById(id: string): Observable<any> {
     return this.http.get(this.url + '/educacion/findById/' + id);
   }
 
-  //update //id:number
+  //update 
   updateEducacion(id: string, educacion: Educacion): Observable<any> {
     return this.http.put<any>(this.url + '/educacion/update/' + id, educacion);
   }
@@ -130,7 +130,7 @@ export class PortfolioService {
   //AcercaDe Service-----------------------------------------------
   //traer lista
   obtenerDatosA(): Observable<AcercaDe[]> {
-    return this.http.get<AcercaDe[]>(this.url + '/acerca/get/acerca');
+    return this.http.get<AcercaDe[]>(this.url + '/acerca/get');
   }
 
   //traer por id //id:string
@@ -146,13 +146,37 @@ export class PortfolioService {
 
 
   //Habilidades---------------------------------------
+  //traer lista
   obtenerDatosSkills(): Observable<Habilidades[]> {
-    return this.http.get<Habilidades[]>(this.url + '/habilidades/get/hab');
+    return this.http.get<Habilidades[]>(this.url + '/habilidades/get');
   }
 
+
+  //traer por id 
+  getHabById(id: string): Observable<any> {
+    return this.http.get(this.url + '/habilidades/findById/' + id);
+  }
+
+  //update 
+  updateHab(id: string, habilidades: Habilidades): Observable<any> {
+    return this.http.put<any>(this.url + '/habilidades/update/' + id, habilidades);
+  }
+
+  //crear
+  addHab(habilidades: Habilidades): Observable<any> {
+    return this.http.post<any>(this.url + '/habilidades/new', habilidades);
+  }
+
+  //borrar
+  deleteHab(id: string): Observable<any> {
+    return this.http.delete(this.url + '/habilidades/delete/' + id)
+  }
+
+
   //Proyectos--------------------------------------------
+  //traer lista
   obtenerDatosProy(): Observable<Proyectos[]> {
-    return this.http.get<Proyectos[]>(this.url + '/proyectos/get/proy');
+    return this.http.get<Proyectos[]>(this.url + '/proyectos/get');
   }
 
 

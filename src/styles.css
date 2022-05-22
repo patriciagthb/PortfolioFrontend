@@ -1,3 +1,12 @@
+body{
+    background-color:#F5EEF8;
+    font-family: 'Merriweather', serif;
+    color:#4A235A;
+}
+h6{
+    font-weight: bold;
+}
+
 .negrita{
     font-weight: bold;
 }
@@ -12,4 +21,39 @@ li {
 .fa-trash-can{
     color: red;
 }
+.fa-trash-can:hover{
+    font-size: 150%;
+}
+
+.fa-brands{
+    color: black;
+}
+.card{
+    border-color: #8E44AD;
+}
+.btn{
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 12px;
+}
+.btn:hover{
+    background-color: #8E44AD;
+    color: white;
+}
+.btn:active{
+    transform: translateY(4px);
+}
+.btnMargen{
+    margin-top: 5%;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: #8E44AD;
+    font-size: 130%;
+}
+
 

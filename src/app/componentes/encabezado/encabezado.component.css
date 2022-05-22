@@ -2,9 +2,12 @@
     border-radius: 50%;
     margin-top: -8%;
     width: 200px;
-    border:solid #32a1ce;
+    border:solid #8E44AD;
     border-width: thin;
 }
 .centrar{
     margin-left: 20px;
+}
+h3{
+    font-family: 'Merriweather', serif;
 }

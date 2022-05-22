@@ -26,7 +26,9 @@ export class EncabezadoComponent implements OnInit {
 
   salir():void{
     this.datosPortfolio.deleteToken();
-    this.ulogged = '';    
+    this.ulogged = '';
+    window.location.reload();
+
   }
   
   loggin():void {
