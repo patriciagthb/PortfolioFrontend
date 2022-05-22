@@ -9,6 +9,8 @@ import { UpdateAcercaDeComponent } from './componentes/update-acerca-de/update-a
 
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddSkillsComponent } from './componentes/add-skills/add-skills.component';
+import { UpdateSkillsComponent } from './componentes/update-skills/update-skills.component';
 
 
 const routes: Routes = [
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: 'update-experiencia/:id', component: UpdateExperienciaComponent},
   {path: 'add-experiencia', component: AddExperienciaComponent},
   {path: 'add-educacion', component: AddEducacionComponent},
-  {path: 'login', component: LoginComponent},  
+  {path: 'login', component: LoginComponent},
+  {path: 'add-skills', component: AddSkillsComponent},
+  {path: 'update-skills/:id', component: UpdateSkillsComponent},  
   {path : '', redirectTo: 'home', pathMatch:'full'}
 ];
 

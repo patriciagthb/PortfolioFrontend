@@ -5,7 +5,17 @@
       <h5 class="card-title negrita">Hard Skills & Soft Skills</h5>
 
       <ul>
+        <div class="col-md-1 ms-auto">
+          <a routerLink="/add-skills/" *ngIf="ulogged!=''"><i class="fa fa-plus mx-3"></i></a>
+      </div>
+      <br>
         <li *ngFor="let skill of skills">
+
+          <div class="col-md-1 ms-auto">
+            <a routerLink="/update-skills/{{skill.id}}" *ngIf="ulogged!=''"><i class="fa fa-pencil mx-3"
+                    type="button"></i></a>
+            <i class="fa-regular fa-trash-can" type="button" (click)="deleteHab(skill.id)" *ngIf="ulogged!=''"></i>
+        </div>
 
           <div class="progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated colort" role="progressbar"

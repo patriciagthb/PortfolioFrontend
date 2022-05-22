@@ -10,6 +10,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class SkillsComponent implements OnInit {
  
   skills:any;
+  ulogged:string = '';
 
   constructor(private datosPortfolio: PortfolioService) { }
 
@@ -21,8 +22,16 @@ export class SkillsComponent implements OnInit {
     this.datosPortfolio.obtenerDatosSkills().subscribe(data => {
       this.skills = data;
     });
-
     
+    this.ulogged = this.datosPortfolio.getUserLogged();
+    
+  }
+
+  deleteHab(id:string){
+    if(confirm('¿Está seguro de que desea eliminar el registro?')){
+    this.datosPortfolio.deleteHab(id).subscribe(data =>{
+      this.ngOnInit()
+    })};
   }
 
 }

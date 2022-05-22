@@ -20,6 +20,9 @@ import { AddEducacionComponent } from './componentes/add-educacion/add-educacion
 import { AddExperienciaComponent } from './componentes/add-experiencia/add-experiencia.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { CookieService } from 'ngx-cookie-service';
+import { AddSkillsComponent } from './componentes/add-skills/add-skills.component';
+import { UpdateSkillsComponent } from './componentes/update-skills/update-skills.component';
+
 
 
 @NgModule({
@@ -37,7 +40,9 @@ import { CookieService } from 'ngx-cookie-service';
     UpdateEncabezadoComponent,
     AddEducacionComponent,
     AddExperienciaComponent,
-    LoginComponent
+    LoginComponent,
+    AddSkillsComponent,
+    UpdateSkillsComponent
   ],
   imports: [
     BrowserModule,

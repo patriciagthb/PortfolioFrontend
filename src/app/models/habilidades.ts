@@ -1,8 +1,6 @@
-export class Habilidades{
-    constructor(
-        public id:number,
-        public nombre:string,
-        public porcentaje:number
-    ){}
+export class Habilidades {
+    id: string;
+    nombre: string;
+    porcentaje: string;
 
 }
