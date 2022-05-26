@@ -16,7 +16,7 @@ import { Observable } from 'rxjs';
 })
 export class PortfolioService {
 
-  url = 'http://localhost:8080/api';
+  url = 'https://morning-temple-53606.herokuapp.com/api';
 
 
   constructor(private http: HttpClient, private cookies: CookieService) { }
